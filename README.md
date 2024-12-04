@@ -52,6 +52,10 @@ The following data cleaning step is to create a new column called "Ingredient Le
 
 Finally, we filter the data table to retain only the following columns: "minutes," "n_steps," "n_ingredients," "cal," "Ingredient Level," and "average_rating."
 
+```py
+print(combination.head(5))
+```
+
 
 |  | id   |  minutes| n_steps| n_ingredients|             cal|  average_rating| Ingredient Level|
 |:-|:-----|:--------|:-------|:-------------|:---------------|:---------------|:----------------|
@@ -60,4 +64,14 @@ Finally, we filter the data table to retain only the following columns: "minutes
 |2 |306168|       40|       6|             9|   Normal Energy|             5.0|             less|
 |3 |286009|      120|       7|             7| Too Much Energy|             5.0|             less|
 |4 |475785|       90|      17|            13|   Normal Energy|             5.0|           normal|
+
+### Univariate Analysis
+The following graph is the distribution of the Average Rate, as the graph shown that the distribution is a right-skewed graph, which means the average rate for most of recipes is stayed in the range between 4.5 and 5.0. 
+
+<iframe src="plot/The_distribution_of_Average_Rating.html" width=800 height=600 frameBorder=0></iframe>
+
+
+
+
+
 
