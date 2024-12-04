@@ -93,12 +93,14 @@ This suggests that calorie level may influence the average rating of a recipe.
 ```py
 print(combination.pivot_table(index = "Ingredient Level", columns = "cal",values='average_rating',aggfunc="mean"))
 ```
-|             cal| Less Energy| Normal Energy| too much Energy| upper Energy|
-|----------------|------------|--------------|----------------|-------------|
-|Ingredient Level|            |              |                |             |
-|            less|    4.647942|      4.633041|        4.617930|     4.609297|
-|            more|    5.000000|      4.858974|        4.764676|     4.864881|
-|          normal|    4.633259|      4.610637|        4.626318|     4.629658|
+| calories_category | Very Low | Low   | Medium | High  | Very High |
+|--------------------|----------|-------|--------|-------|-----------|
+| minutes_category   |          |       |        |       |           |
+| Very Quick         | 4.74     | 4.75  | 4.72   | 4.68  | 4.66      |
+| Quick              | 4.68     | 4.67  | 4.71   | 4.68  | 4.68      |
+| Medium             | 4.61     | 4.65  | 4.68   | 4.68  | 4.67      |
+| Slow               | 4.68     | 4.68  | 4.67   | 4.69  | 4.67      |
+| Very Slow          | 4.68     | 4.66  | 4.64   | 4.61  | 4.63      |
 
 
 As shown in the table above, it presents the combined values for "Ingredient Level" and "Calorie Level." 
