@@ -66,12 +66,10 @@ print(combination.head(5))
 |4 |475785|       90|      17|            13|   Normal Energy|             5.0|           normal|
 
 ### Univariate Analysis
-The following graph is the distribution of the Average Rate, as the graph shown that the distribution is a right-skewed graph, which means the average rate for most of recipes is stayed in the range between 4.5 and 5.0. 
+The following graph shows the distribution of the average ratings. As the graph illustrates, the distribution is right-skewed, meaning that most recipes have an average rating between 4.5 and 5.0. Understanding the distribution of the average rating provides valuable insight into the general trend, helping us predict the average rating of unseen data.
 
 <iframe src="plot/The_distribution_of_Average_Rating.html" width=800 height=600 frameBorder=0></iframe>
 
+The following graph shows the distribution of the number of ingredients. It reveals that the majority of recipes have between 5 and 15 ingredients. This distribution also provides insight into the importance of the number of ingredients, suggesting its potential relevance in recipe ratings or other aspects of the data.
 
-
-
-
-
+<iframe src="plot/Number_ingredients.html" width=800 height=600 frameBorder=0></iframe>
