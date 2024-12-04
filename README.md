@@ -53,9 +53,11 @@ The following data cleaning step is to create a new column called "Ingredient Le
 Finally, we filter the data table to retain only the following columns: "minutes," "n_steps," "n_ingredients," "cal," "Ingredient Level," and "average_rating."
 
 
-   | id   |  minutes| n_steps| n_ingredients|             cal|  average_rating| Ingredient Level|
+|  | id   |  minutes| n_steps| n_ingredients|             cal|  average_rating| Ingredient Level|
+|:-|:-----|:--------|:-------|:-------------|:---------------|:---------------|:----------------|
 |0 |333281|       40|      10|             9|   Normal Energy|             4.0|             less|
 |1 |453467|       45|      12|            11| Too Much Energy|             5.0|           normal|
 |2 |306168|       40|       6|             9|   Normal Energy|             5.0|             less|
 |3 |286009|      120|       7|             7| Too Much Energy|             5.0|             less|
 |4 |475785|       90|      17|            13|   Normal Energy|             5.0|           normal|
+
