@@ -94,7 +94,7 @@ This suggests that calorie level may influence the average rating of a recipe.
 print(combination.pivot_table(index = "Ingredient Level", columns = "cal",values='average_rating',aggfunc="mean"))
 ```
 |             cal| Less Energy| Normal Energy| too much Energy| upper Energy|
-|Ingredient Level|:-----------|:-------------|:---------------|:------------|
+|Ingredient Level|            |              |                |             |
 |            less|    4.647942|      4.633041|        4.617930|     4.609297|
 |            more|    5.000000|      4.858974|        4.764676|     4.864881|
 |          normal|    4.633259|      4.610637|        4.626318|     4.629658|
