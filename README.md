@@ -73,3 +73,55 @@ The following graph shows the distribution of the average ratings. As the graph 
 The following graph shows the distribution of the number of ingredients. It reveals that the majority of recipes have between 5 and 15 ingredients. This distribution also provides insight into the importance of the number of ingredients, suggesting its potential relevance in recipe ratings or other aspects of the data.
 
 <iframe src="plot/Number_ingredients.html" width=800 height=600 frameBorder=0></iframe>
+
+
+### Bivariate Analysis
+The following graph shows the scatter plot of the number of steps versus the average rating. As the graph indicates, most points fall within the range of 1 to 40 steps.
+However, there is a noticeable trend: as the number of steps increases, the occurrence of lower average ratings decreases. 
+This trend provides us with valuable insight for predicting the average rating of each recipe.
+
+<iframe src="plot/Number_of_Steps_VS_Average_Rate.html" width=800 height=600 frameBorder=0></iframe>
+
+The following graph shows boxplots for the four different calorie level categories. The boxplots indicate that the maximum average rating for all categories is 5. 
+However, the lower quantiles for "Normal Energy" and "Less Energy" appear slightly higher than those for "Too Much Energy" and "Upper Energy."
+This suggests that calorie level may influence the average rating of a recipe.
+
+<iframe src="plot/Boxplot_for_Colarie_Level_vs_Average_Rate.html" width=800 height=600 frameBorder=0></iframe>
+
+
+### Interesting Aggregates
+```py
+print(combination.pivot_table(index = "Ingredient Level", columns = "cal",values='average_rating',aggfunc="mean"))
+```
+|             cal| Less Energy| Normal Energy| too much Energy| upper Energy|
+|Ingredient Level|            |              |                |             |
+|:---------------|:-----------|:-------------|:---------------|:------------|
+|            less|    4.647942|      4.633041|        4.617930|     4.609297|
+|            more|    5.000000|      4.858974|        4.764676|     4.864881|
+|          normal|    4.633259|      4.610637|        4.626318|     4.629658|
+
+As shown in the table above, it presents the combined values for "Ingredient Level" and "Calorie Level." 
+This table is crucial in providing insights for predicting the average rating of each recipe. According to the table, 
+recipes with more ingredients tend to have higher average ratings compared to those with fewer ingredients.
+From the calorie level perspective, the table suggests that "Less Energy"
+recipes generally have slightly higher average ratings than those in other calorie categories.
+Those conclusion from the table above provides us with direction to predict average rate.
+
+
+### Imputation
+Firstly, the features we explore, such as "minutes," "n_steps," "n_ingredients," and "cal," do not contain any missing values. 
+The "Ingredient Level" column is created based on the information from "n_ingredients." Although the "average_rate" column does contain missing values due to the conversion of
+ 0 ratings to NaN, these missing values occur because no user rated those recipes. Since these recipes do not provide meaningful information, 
+we will drop all missing values for future predictions. As a result, the distribution remains unchanged before and after imputation.
+
+<iframe src="plot/The_distribution_of_Average_Rating.html" width=800 height=600 frameBorder=0></iframe>
+
+
+## Problem Identification
+Our goal is to predict the average rating for each recipe, which is a regression problem.
+We chose to predict the average rating because it is generally a fair value for evaluating recipes from the public's perspective.
+If we can accurately predict the average rating for each recipe, it will make it easier for users to select recipes to try.
+The features we used to predict the average rating are "cal," "minutes," "n_steps," and "n_ingredients."
+"Minutes" and "n_steps" represent the time required to complete the recipe, making them reasonable variables for predicting the average rating. 
+"n_ingredients" and "cal" represent, to some extent, the healthiness and taste of the recipe, which also makes them relevant variables for prediction. 
+Since our model is a regression model, we will use Mean Squared Error (MSE) to evaluate its performance.
