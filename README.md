@@ -151,9 +151,7 @@ In our final model, we will address this limitation and work to improve the mode
 
 
 
-
- ### Final Model
- 
+### Final Model
 In our final model, we decided to include the features ***"minutes"*** and ***"n_steps"*** in the prediction process. 
 The "minutes" feature represents the time users need to complete the recipe, while "n_steps" reflects the number of steps, 
 which correlates to both the time required and the complexity of the recipe. We believe that the time spent on a recipe and its level of sophistication can influence 
