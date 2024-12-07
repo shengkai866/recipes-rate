@@ -122,7 +122,7 @@ we will drop all missing values for future predictions. As a result, the distrib
 <iframe src="plot/The_distribution_of_Average_Rating.html" width=800 height=600 frameBorder=0></iframe>
 
 
-## Problem Identification
+### Problem Identification
 Our goal is to predict the average rating for each recipe, which is a regression problem.
 We chose to predict the average rating because it is generally a fair value for evaluating recipes from the public's perspective.
 If we can accurately predict the average rating for each recipe, it will make it easier for users to select recipes to try.
@@ -133,7 +133,7 @@ Since our model is a regression model, we will use Mean Squared Error (MSE) to e
 
 
 
-## Baseline model
+### Baseline model
 For our baseline model, we first split the entire dataset into four subsets: X_train, X_test, y_train, and y_test. The X_train 
 and X_test datasets include the columns "minutes," "n_steps," "n_ingredients," and "cal," while the y_train and y_test datasets contain the corresponding 
 "average_rating" column.
